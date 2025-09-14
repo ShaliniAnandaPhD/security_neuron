@@ -1,6 +1,3 @@
-// Fixed Security Misconfiguration vulnerability
-// Generated: 2025-09-14T09:09:45.934Z
-
 export const securityConfig = {
   helmet: {
     contentSecurityPolicy: {
@@ -19,6 +16,7 @@ export const securityConfig = {
     }
   },
   
+  // Fixed by AI: Proper CORS and session configuration
   cors: {
     origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000'],
     credentials: true,
