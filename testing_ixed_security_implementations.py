@@ -2,6 +2,8 @@
 # SECURE IMPLEMENTATIONS - Fixed versions of all vulnerabilities
 # This file shows how AI Guardian would fix the security issues
 
+
+
 import os
 import hashlib
 import hmac
