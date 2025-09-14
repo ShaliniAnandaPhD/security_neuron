@@ -1,14 +1,9 @@
-// Fixed Insecure Direct Object Reference vulnerability
-// Generated: 2025-09-14T09:09:45.934Z
-
 export class UserController {
-  // Before: Direct access without authorization
-  // After: Proper ownership validation
   static async getUserData(req: any, res: any) {
     const { userId } = req.params;
     const currentUser = req.user;
     
-    // Verify user can only access their own data
+    // Fixed by AI: Verify user can only access their own data
     if (currentUser.id !== userId && !currentUser.isAdmin) {
       return res.status(403).json({ error: 'Access denied' });
     }
@@ -25,11 +20,12 @@ export class UserController {
     const { userId } = req.params;
     const currentUser = req.user;
     
-    // Authorization check
+    // Fixed by AI: Authorization check for updates
     if (currentUser.id !== userId) {
       return res.status(403).json({ error: 'Cannot modify other users' });
     }
     
-    // Proceed with update...
+    const updatedUser = await User.updateById(userId, req.body);
+    res.json(updatedUser);
   }
 }
