@@ -1,6 +1,3 @@
-// Fixed CSRF vulnerability
-// Generated: 2025-09-14T09:09:45.934Z
-
 import crypto from 'crypto';
 
 export class CSRFProtection {
@@ -21,6 +18,7 @@ export class CSRFProtection {
     return true;
   }
   
+  // Fixed by AI: Added CSRF protection for state-changing operations
   static middleware(req: any, res: any, next: any) {
     if (['POST', 'PUT', 'DELETE'].includes(req.method)) {
       const token = req.headers['x-csrf-token'];
