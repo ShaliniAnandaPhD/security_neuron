@@ -1,5 +1,5 @@
 // Fixed SQL Injection vulnerability
-// Generated: 2025-09-14T05:30:16.777Z
+// Generated: 2025-09-14T05:55:27.289Z
 
 export class SecurityQueries {
   // Before: SELECT * FROM users WHERE id = ${userId}
