@@ -1,6 +1,3 @@
-// Fixed Broken Access Control vulnerability
-// Generated: 2025-09-14T09:09:45.934Z
-
 export class AccessControl {
   private static permissions = {
     admin: ['read', 'write', 'delete', 'manage'],
@@ -14,6 +11,7 @@ export class AccessControl {
     return userPermissions.includes(requiredPermission);
   }
   
+  // Fixed by AI: Comprehensive role-based access control
   static requirePermission(permission: string) {
     return (req: any, res: any, next: any) => {
       const userRole = req.user?.role || 'guest';
