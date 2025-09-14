@@ -1,5 +1,5 @@
 // Fixed Insecure Direct Object Reference vulnerability
-// Generated: 2025-09-14T08:49:04.173Z
+// Generated: 2025-09-14T09:09:45.934Z
 
 export class UserController {
   // Before: Direct access without authorization
